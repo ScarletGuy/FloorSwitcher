@@ -22,3 +22,5 @@ Changes the "floor" flag upon entering. Has four custom properties.
 -----
 
 It supports followers now.
+
+Also you could use an example mod to better understand how it works. The mod is in the sceond branch of this repository.
