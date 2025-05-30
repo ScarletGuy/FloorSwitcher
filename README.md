@@ -3,11 +3,11 @@ A library for Kristal allowing you to have multiple floors and sets of collision
 
 It allows you to have multiple sets of collision all of which depended on a "floor" flag which only makes active those with the same "floor" property. So you can create multiple "floors" this way.
 
-# INSTRUCTION:
+# INSTRUCTION(Objects/Events):
 
 ## Floor(floor)
 
-Basically, it's a collision with a certain group(floor). Only gets active when the value of "floor" flag equals it's own "flag" property.
+Basically, it's a collision with a certain group(floor). Only gets active when the value of "floor" flag equals it's own "floor" property.
 - Only has one property - "floor" which defines the floor that object belongs.
 
 ## FloorSwitcher(floor_switcher)
