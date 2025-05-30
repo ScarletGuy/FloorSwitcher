@@ -1,0 +1,13 @@
+{
+    "id": "floorsexample",
+    "name": "FloorsExample",
+    "subtitle": "",
+
+    "version": "v1.0.0",
+
+    "engineVer": "v0.10.0-dev",
+
+    "map": "floored",
+    
+    "party": ["kris", "susie"]
+}
