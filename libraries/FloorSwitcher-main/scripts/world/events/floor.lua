@@ -18,9 +18,9 @@ function Floor:init(data)
     self.font = Assets.getFont("small", 10)
 
     if self.floor then
-        self.flag = Game:getFlag("#c-" + self.floor)
+        self.flag = Game:getFlag("#c-" .. self.floor)
         if self.flag == nil then
-            Game:setFlag("#c-" + self.floor, 0)
+            Game:setFlag("#c-" .. self.floor, 0)
         end
     end
     self.floor = Game:getFlag("floor")
@@ -34,11 +34,11 @@ function Floor:update()
                 Game.world.player.y = Game.world.player.y - self.height
             end
         end	
-        Game:setFlag("#c-" + self.pfloor, 1)
+        Game:setFlag("#c-" .. self.pfloor, 1)
     elseif tonumber(self.floor) ~= tonumber(self.pfloor) then
-        Game:setFlag("#c-" + self.pfloor, 0)
+        Game:setFlag("#c-" .. self.pfloor, 0)
     end
-    self.flag = Game:getFlag("#c-" + self.pfloor)
+    self.flag = Game:getFlag("#c-" .. self.pfloor)
     if self.flag == 1 then
         self.solid = true
     elseif self.flag == 0 then
