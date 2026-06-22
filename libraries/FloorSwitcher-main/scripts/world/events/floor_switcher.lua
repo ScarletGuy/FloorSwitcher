@@ -115,19 +115,19 @@ function Floor_Switcher:update()
     end
     if self.activef == 1 then
         for _,follower in ipairs(Game.world.followers) do
-            self.follower_floor = Game:getFlag("f-floor" + "_" + follower.actor)
+            self.follower_floor = Game:getFlag("f-floor" .. "_" .. tostring(follower.actor))
             follower.floor = self.follower_floor
             if follower.floor == nil then
-                Game:setFlag("f-floor" + "_" + follower.actor, 1)
+                Game:setFlag("f-floor" .. "_" .. tostring(follower.actor), 1)
             end
             if follower:collidesWith(self) then
                 if tonumber(follower.floor) == tonumber(self.pfloor) or self.ultimate == true then
                     self.can_collide = true
                     if self.tofloor and follower.floor then
-                        Game:setFlag("f-floor" + "_" + follower.actor, self.tofloor)
+                        Game:setFlag("f-floor" .. "_" .. tostring(follower.actor), self.tofloor)
                     end
                     if self.l then
-                        if tonumber(Game:getFlag("f-floor" + "_" + follower.actor)) == tonumber(self.tofloor) then
+                        if tonumber(Game:getFlag("f-floor" .. "_" .. tostring(follower.actor))) == tonumber(self.tofloor) then
                             follower:setLayer(self.send_layer)
                         end
                     end
